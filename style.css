@@ -38,7 +38,7 @@ header{
     align-items: center;
 }
 .right-container{
-    height: auto;
+    height: 500vh;
     width: auto;
     padding: 24px;
     gap: 16px;
