@@ -107,3 +107,39 @@ h3{
 #comment{
     cursor: pointer;
 }
+#comment-box{
+    height: 200px;
+    width: 300px;
+    position: relative;
+    left: 122px;
+    top: -15.5px;
+    display: flex;
+    flex-direction: column;
+}
+#text-box{
+    height:90px;
+    width:300px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid aqua;
+}
+#c-btn{
+    height:20px;
+    width:70px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: rgba(64, 128, 170, 0.336);
+    color: white;
+}
+
+#real-cmt{
+    height: 150px;
+    width: 280px;
+    position: relative;
+    left: 122px;
+    top: 0px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid aqua;
+    overflow-y: hidden;
+}
