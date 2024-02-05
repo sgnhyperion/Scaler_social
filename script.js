@@ -28,8 +28,16 @@ postbutton.addEventListener("click", function(){
     post.appendChild(react);
     board.appendChild(post);
     
+    let likewatcher = false;
     like.addEventListener("click", function(){
-        like.src = "https://d2beiqkhq929f0.cloudfront.net/public_assets/assets/000/064/025/original/state_clicked.png?1706888455";
+        if(likewatcher==false){
+            like.src = "https://d2beiqkhq929f0.cloudfront.net/public_assets/assets/000/064/025/original/state_clicked.png?1706888455";
+            likewatcher  = true;
+        }
+        else{
+            like.src = "https://d2beiqkhq929f0.cloudfront.net/public_assets/assets/000/064/029/original/heart.png?1706888679"
+            likewatcher = false;
+        }
     });
 
     del.addEventListener("click", function(){
@@ -59,6 +67,7 @@ postbutton.addEventListener("click", function(){
             console.log(commentbox.innerHTML);
             commentbox.remove();
             board.appendChild(realcmt);
+            c_btn.stopPropagation();
         });
     });
 });
