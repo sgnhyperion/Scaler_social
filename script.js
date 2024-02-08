@@ -3,13 +3,17 @@ let board = document.querySelector(".right-container");
 let text = document.querySelector("#text-area");
 let wordcount = document.querySelector("#word-count");
 
+text.addEventListener("input",function(){
+    let count = text.value.length;
+    wordcount.innerHTML = count+"/100";
+})
+
 postbutton.addEventListener("click", function(){
     let post = document.createElement("div");
     post.style.textAlign = "center";
     post.id = "created-post";
     post.innerHTML = text.value;
-    let count = text.value.length;
-    wordcount.innerHTML = count + "/100";
+    wordcount.innerHTML = "0/100";
     text.value = "";
     let react = document.createElement("div");
     react.id = "react";
@@ -63,11 +67,9 @@ postbutton.addEventListener("click", function(){
             let realcmt = document.createElement("div");
             realcmt.id = "real-cmt";
             realcmt.innerHTML = textbox.value;
-            realcmt.appendChild(react);
             console.log(commentbox.innerHTML);
             commentbox.remove();
             board.appendChild(realcmt);
-            c_btn.stopPropagation();
         });
     });
 });
